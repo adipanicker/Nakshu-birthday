@@ -101,4 +101,9 @@ export const content = {
     "Write line 3 here.",
   ],
   messageSign: "- Aditya", // change if you want
+
+  cakeTitle: "One last thing!!",
+  cakeBlowHint: "close your eyes, make a wish, then tap",
+  cakeCutHint: "now cut it!",
+  cakeFinal: "Enjoy this calorie less cake for your birthday from me :P",
 };

@@ -7,6 +7,8 @@ import AppreciationCards from "./components/AppreciationCards";
 import Quiz from "./components/Quiz";
 import Polaroids from "./components/Polaroids";
 import BirthdayMessage from "./components/BirthdayMessage";
+import MusicPlayer from "./components/MusicPlayer";
+import CakeCutting from "./components/CakeCutting";
 
 export default function App() {
   const [opened, setOpened] = useState(false);
@@ -22,10 +24,12 @@ export default function App() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
+          <MusicPlayer />
           <Hero />
           <AppreciationCards />
           <Quiz />
           <BirthdayMessage />
+          <CakeCutting />
         </motion.main>
       )}
     </AnimatePresence>
