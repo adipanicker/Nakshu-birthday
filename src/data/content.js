@@ -34,7 +34,7 @@ export const content = {
   quiz: [
     {
       q: "What was my first impression about you?",
-      options: ["She's a noob", "She's cute", "She's mean", "She's stupid"],
+      options: ["She's a noob", "She's cute", "She's mean", "She's a dinosaur"],
       answer: 1,
       reveal: "Uk I found u cute the first time I saw you!!",
     },
@@ -46,8 +46,8 @@ export const content = {
         "Your stupid flirts",
         "Your gay allegations",
       ],
-      answer: 1,
-      reveal: "I'm lowkey getting addicted to your voice. ahhhh",
+      answer: 2,
+      reveal: "I admit I smile when u flirt okay? you're lowkey good at it",
     },
     {
       q: "What's my most annoying habit?",
@@ -74,7 +74,7 @@ export const content = {
     },
 
     {
-      q: "Who's the best?",
+      q: "Who's the best? (think carefully)",
       options: ["Aditya", "Nakshathra"],
       answer: 1,
       reveal: "Ofc the birthday girl is the best!! 💗",
