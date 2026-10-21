@@ -1,0 +1,361 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night: #0b0b2b;
+  --color-night-2: #1a1445;
+  --color-blush: #fff0f5;
+  --color-pink-soft: #ffd6e7;
+  --color-pink-main: #ff8fb8;
+  --color-rose: #ff5c93;
+  --color-lavender: #d9c8ff;
+  --color-cream: #fffaf3;
+  --color-ink: #5a3a4a;
+
+  --font-heading: "Pacifico", cursive;
+  --font-body: "Nunito", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-blush);
+  color: var(--color-ink);
+  overflow-x: hidden;
+}
+
+.gate {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 45%, #20254f 0%, transparent 48%),
+    linear-gradient(145deg, #0b1029 0%, #111638 52%, #17123b 100%);
+  font-family: "DM Sans", sans-serif;
+}
+
+.gate-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.gate-glow-one {
+  top: 8%;
+  left: -100px;
+  background: #7db7ff;
+}
+
+.gate-glow-two {
+  right: -120px;
+  bottom: 4%;
+  background: #a89bff;
+}
+
+.gate-star {
+  z-index: -1;
+  background: #e4eeff;
+  box-shadow: 0 0 8px #bdd8ff70;
+}
+
+.gate-content {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.gate-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #c4d4f4;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.gate-label-star {
+  color: #a9caff;
+  font-size: 12px;
+}
+
+.gate-name-wrap {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.gate-name {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 5px;
+  margin: 0;
+  color: #f8f8ff;
+  font-family: "Caveat", cursive;
+  font-size: clamp(3.8rem, 11vw, 7.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-shadow: 0 0 35px #c7dcff13;
+  overflow-wrap: anywhere;
+}
+
+.gate-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.68em;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: #bfd9ff;
+  box-shadow: 0 0 12px #bfd9ff80;
+}
+
+.gate-subtitle {
+  margin: 12px 0 0;
+  color: #c5d1ec;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  letter-spacing: 0.035em;
+}
+
+.gate-button {
+  position: relative;
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 34px;
+  padding: 0 25px;
+  overflow: hidden;
+  border: 1px solid #c6d9ff55;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #dce9ff1c, #b7d4ff08);
+  color: #f5f7ff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px #a8caff08;
+  cursor: pointer;
+  transition:
+    border-color 250ms ease,
+    background 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.gate-button:hover:not(:disabled) {
+  border-color: #c6d9ffad;
+  background: #dce9ff20;
+  box-shadow: 0 0 35px #a8caff20;
+}
+
+.gate-button:disabled {
+  cursor: default;
+}
+
+.gate-button-sparkle {
+  color: #c5dcff;
+  transition: transform 250ms ease;
+}
+
+.gate-button:hover .gate-button-sparkle {
+  transform: rotate(18deg) scale(1.12);
+}
+
+.gate-button-arrow {
+  margin-left: -5px;
+  opacity: 0;
+  transform: translate(-3px, 3px);
+  transition: all 250ms ease;
+}
+
+.gate-button:hover .gate-button-arrow {
+  margin-left: 0;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.gate-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 48px;
+  color: #8496bf;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+}
+
+.gate-footer-line {
+  width: 22px;
+  height: 1px;
+  background: #a7c3f74d;
+}
+
+.gate-moon {
+  position: absolute;
+  top: 13%;
+  right: 19%;
+  color: #d9e7ff;
+  font-family: Georgia, serif;
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  line-height: 1;
+  text-shadow:
+    0 0 22px #c6dcff4a,
+    0 0 75px #9cbcff38;
+}
+
+.gate-orbit {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #c5dcff12;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.gate-orbit-one {
+  width: min(78vw, 660px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%) scaleY(0.58) rotate(-28deg);
+}
+
+.gate-orbit-two {
+  width: min(92vw, 780px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%) scaleY(0.76) rotate(25deg);
+  border-color: #c5dcff0a;
+}
+
+.orbit-star,
+.orbit-dot {
+  position: absolute;
+  top: 8%;
+  left: 19%;
+  color: #dceaff;
+  font-size: 12px;
+  text-shadow: 0 0 12px #bcd7ff;
+}
+
+.orbit-dot {
+  top: 80%;
+  left: 12%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #bfd9ff;
+}
+
+.gate-corner {
+  position: absolute;
+  color: #b8d2ff63;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.gate-corner-top {
+  top: 28px;
+  left: 28px;
+}
+
+.gate-corner-bottom {
+  right: 28px;
+  bottom: 28px;
+}
+
+@media (max-width: 480px) {
+  .gate-name {
+    font-size: clamp(3.4rem, 13vw, 5rem);
+  }
+
+  .gate-moon {
+    top: 12%;
+    right: 10%;
+    font-size: 4rem;
+  }
+
+  .gate-label {
+    gap: 8px;
+    font-size: 9px;
+    letter-spacing: 0.17em;
+  }
+
+  .gate-footer {
+    margin-top: 40px;
+    font-size: 7px;
+  }
+
+  .gate-footer-line {
+    width: 14px;
+  }
+
+  .gate-orbit-one {
+    width: 105vw;
+  }
+
+  .gate-orbit-two {
+    width: 120vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gate-button,
+  .gate-button-sparkle,
+  .gate-button-arrow {
+    transition: none;
+  }
+}
+
+.gate-main-star {
+  position: absolute;
+  z-index: 1;
+  top: 13%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 0 22px #9dc5ff55);
+}
+
+.gate-star-icon {
+  width: 68px;
+  height: 68px;
+}
+
+.gate-star-sparkle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #e6efff;
+  font-size: 22px;
+  text-shadow: 0 0 15px #c2dcff;
+}
+
+.gate-name {
+  max-width: 100%;
+  font-family: "Caveat", cursive;
+  font-size: clamp(2.7rem, 8vw, 5rem);
+  line-height: 1.1;
+  font-weight: 600;
+  color: #f8f8ff;
+  overflow-wrap: anywhere;
+}
+
+@media (max-height: 650px) {
+  .gate-main-star {
+    top: 7%;
+    transform: translateX(-50%) scale(0.8);
+  }
+
+  .gate-content {
+    padding-top: 70px;
+  }
+}
